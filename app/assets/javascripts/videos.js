@@ -51,41 +51,45 @@
 
     var keyword       = encodeURIComponent(search_input);
     // Youtube API 
-    var yt_url        = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q='+keyword+'%2Cmusic%2C+full%2C+concert%2C+festival&key=AIzaSyB7iyk1ZqMmVn2EaSK6Nfnb0nsGuIZDa2A&'
+    var yt_url        = 'https://www.googleapis.com/youtube/v3/search?q='+keyword+'&part=snippet&%2Cmusic%2C+full%2C+concert%2C+festival&type=video&videoEmbeddable=true&key=AIzaSyD44AcTlR3pwu3fO8FuhzoVn1rxurvbb3Q'
   
     $.ajax ({
       crossDomain: true,
       type: "GET",   //you can also use Method: instead of type
       url: yt_url,
-      dataType:"json",
+      dataType:"jsonp",
       success: function(data) {
-      $.each(data.feed.entry, function(i, item) {                                
-        var title    = item['title']['$t'];
-        var videoid  = item['id']['$t'];
-        var htmlString  = '<ul id="videoslisting">';
+      if (data.items) {
+      $('#videos').html('')
+      $.each(data.items, function(i, item) {                                
+        //var all_videos=response.item.items; 
+            var video_id = item.id.videoId;
+            var video_title = item.snippet.title;
+            var video_viewCount = item.viewCount;
+      
 
-        var pubdate  = item['published']['$t'];
-        var fulldate = new Date(pubdate).toLocaleDateString();
-      
-        var thumbimg = item['media$group']['media$thumbnail'][0]['url'];
-        var tinyimg1 = item['media$group']['media$thumbnail'][1]['url'];
-        var tinyimg2 = item['media$group']['media$thumbnail'][2]['url'];
-        var tinyimg3 = item['media$group']['media$thumbnail'][3]['url'];
-      
-        var vlink    = item['media$group']['media$content'][0]['url'];
-        var ytlink   = item['media$group']['media$player'][0]['url'];
-        var numviews = item['yt$statistics']['viewCount'];
-        var numcomms = item['gd$comments']['gd$feedLink']['countHint'];
-      
-        htmlString  += '<li class="clearfix"><h2>' + title + '</h2>';
-        htmlString  += '<div class="videothumb"><a href="#" target="_blank"><img src="' + thumbimg + '" width="480" height="360"></a></div>';
-        htmlString  += '<div class="meta"><p>Published on <strong>' + fulldate + '</strong></p><p>Total views: <strong>' + commafy(numviews) + '</strong></p><p><a href="#" class="external" target="_blank">View on YouTube</a></p><p><a href="'+ vlink +'" class="external" target="_blank">View in Fullscreen</a></p><p><strong>Alternate Thumbnails</strong>:<br><img src="'+ tinyimg1 +'"> <img src="' + tinyimg2 + '"> <img src="'+ tinyimg3 +'"></p></div></li>';
-        $('#videos').html(htmlString + "</ul>");
-      }); // end each loop
+            // IFRAME Embed for YouTube
+            var video_frame="<iframe width='900' height='600' src='http://www.youtube.com/embed/"+video_id+"'fs=1 frameborder='2' type='text/html'></iframe>";
+            var search_vids="\
+              <div class='result'> \
+                <div id='title'>" + video_title + "</div> \
+                <div class='vid_div'>" + video_frame + "</div> \
+                <div id='count'>" + video_viewCount + " Views</div> \
+              </div>";
+
+            console.log("appending "+video_title);
+            $("#videos").append(search_vids);
+          });
+        } else {
+          $("#videos").append("<div class='no'>No Videos</div>");
+        }
+      }
+    });
+   // end each loop
     
       
-    }
-    }); // end json parsing
+  
+     // end json parsing
   
   // commafy function source
   // http://stackoverflow.com/a/6785438/477958
