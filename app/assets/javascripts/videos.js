@@ -51,13 +51,13 @@
 
     var keyword       = encodeURIComponent(search_input);
     // Youtube API 
-    var yt_url        = 'https://www.googleapis.com/youtube/v3/search?q='+keyword+'&part=snippet&%2Cmusic%2C+full%2C+concert%2C+festival&type=video&videoEmbeddable=true&key=AIzaSyD44AcTlR3pwu3fO8FuhzoVn1rxurvbb3Q'
+    var yt_url        = 'https://www.googleapis.com/youtube/v3/search?part=snippet&q='+keyword+'%2C+music%2C+live%2C+festival%2C+concert%2C+full&type=video&videoDuration=long&key=AIzaSyD44AcTlR3pwu3fO8FuhzoVn1rxurvbb3Q'
   
     $.ajax ({
       crossDomain: true,
       type: "GET",   //you can also use Method: instead of type
       url: yt_url,
-      dataType:"jsonp",
+      dataType:"json",
       success: function(data) {
       if (data.items) {
       $('#videos').html('')
