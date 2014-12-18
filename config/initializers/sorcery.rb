@@ -121,7 +121,7 @@ Rails.application.config.sorcery.configure do |config|
   #
    config.google.key = "985369108945-rkq9svdoq6nh78iiojkaoamh0i9d5fjp.apps.googleusercontent.com"
    config.google.secret = "M0IHl1ngIbp1y7BwRmnEWZPw"
-   config.google.callback_url = "http://localhost:3000/oauth2callback"
+   config.google.callback_url = "https://accounts.google.com/o/oauth2/auth&response_type=token"
    config.google.user_info_mapping = {:email => "email", :username => "name"}
   #
   # config.vk.key = ""
