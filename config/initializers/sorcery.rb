@@ -111,7 +111,7 @@ Rails.application.config.sorcery.configure do |config|
   #
    config.facebook.key = "1577934619089484"
    config.facebook.secret = "daa58b9395717f10bfeea810f58a5176"
-   config.facebook.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=facebook"
+   config.facebook.callback_url = "http://localhost:3000/oauth/callback?provider=facebook"
    config.facebook.user_info_mapping = {:email => "name"}
    config.facebook.access_permissions = ["email", "publish_stream"]
   #
