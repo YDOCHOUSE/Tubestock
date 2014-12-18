@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'oauths/oauth'
+
+  get 'oauths/callback'
+
   get 'user_sessions/new'
 
   get 'user_sessions/create'
@@ -11,7 +15,15 @@ Rails.application.routes.draw do
 
   get 'password_resets/update'
 
+  post "oauth/callback" => "oauths#callback"
+  
+  get "oauth/callback" => "oauths#callback" # for use with Github, Facebook
+  
+  get "oauth2/callback" => "oauths#callback" # for use with Github, Facebook
 
+  get "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
+
+  root 'videos#index'
 
   resources :users
   resources :user_sessions
