@@ -14,7 +14,6 @@
     <% if current_user %>
       <p id="log"><%= "Logged in as: #{current_user.email}." %></p>
       <p id="log"><%= link_to "Logout", :logout, method: :post %></p>
-      <div id="logo"></div>
     <% else %> | 
       <%= link_to 'Log in with Facebook', auth_at_provider_path(:provider => :facebook) %>
     <% end %>
@@ -23,6 +22,8 @@
     <p id="notice"><%= flash[:notice] %></p>
     <p id="alert"><%= flash[:alert] %></p>
   </div>
+
+  <div id="logo"></div>
  
 <%= yield %>
 

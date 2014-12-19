@@ -20,6 +20,8 @@ body {
   line-height: 1; 
   background-image: url('background2.png');
   color: #535353;
+  padding-left: 5px;
+  padding-right: 5px;
   padding-bottom: 65px;
 }
 
@@ -63,6 +65,7 @@ h2 {
   font-size: 2.5em;
   line-height: 1.15em;
   margin-bottom: 9px;
+  color: #FFF;
 }
 
 p {
@@ -81,6 +84,14 @@ a:hover { color: #ffffff; }
   line-height: 2.5em;
   margin-bottom: 8px;
   color: #FFF;
+}
+
+#title {
+  font-size: 1.65em;
+  line-height: 2.0em;
+  margin-bottom: 8px;
+  color: #FFF;
+  padding-left: 165px;
 }
 
 #alert {
@@ -107,7 +118,7 @@ a:hover { color: #ffffff; }
   line-height: 1.5em;
   margin-bottom: 8px;
   padding-left: 5px;
-  background-color:rgba(75,75,75,0.85); 
+  background-color:rgba(75,75,75,0.80); 
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 8px;
@@ -119,7 +130,7 @@ a:hover { color: #ffffff; }
   width: 960px;
   margin: 0 auto;
   padding: 10px 24px; 
-  background-color:rgba(75,75,75,0.75); 
+  background-color:rgba(75,75,75,0.70); 
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 8px;
@@ -128,7 +139,10 @@ a:hover { color: #ffffff; }
 }
 
 #logo {
-  background-image: url('tubestockinverted.png');
+  float: right;
+  width: 200px;
+  height: 150px;
+  background-image: url('tubestockinvertedsmall.png');
 
 }
 
@@ -149,7 +163,7 @@ a:hover { color: #ffffff; }
 
 .search_input {
   float: right;
-  background-image: url('magnifyingglass.png') no-repeat 6px 4px; 
+  background-image:transparent url('magnifyingglass.png') no-repeat 6px 4px; 
 }
 
 #usersnav ul li a {
