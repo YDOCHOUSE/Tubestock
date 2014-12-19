@@ -22,6 +22,7 @@ body {
   color: #535353;
   padding-left: 5px;
   padding-right: 5px;
+  padding-top: 5px;
   padding-bottom: 65px;
 }
 
@@ -56,21 +57,22 @@ h1 {
   font-family: 'Milonga', 'Trebuchet MS', Georgia, serif;
   color: #FFF;
   font-size: 4.2em;
-  margin-bottom: 5px;
   font-weight: normal;
   text-align: center;
+  margin-left: 95px;
 }
 
 h2 {
   font-size: 2.5em;
-  line-height: 1.15em;
-  margin-bottom: 9px;
+  line-height: 3.15em;
+  margin-bottom: 1px;
   color: #FFF;
 }
 
 p {
   font-size: 1.4em;
   line-height: 1.5em;
+  margin-top: 15px;
   margin-bottom: 8px;
   color: #fff;
 }
@@ -81,8 +83,7 @@ a:hover { color: #ffffff; }
 
 #notice {
   font-size: 2.0em;
-  line-height: 2.5em;
-  margin-bottom: 8px;
+  line-height: 2.5em;  
   color: #FFF;
 }
 
@@ -105,43 +106,44 @@ a:hover { color: #ffffff; }
   font-size: 1.2em;
   line-height: 1.2em;
   color: #FFF;
+  margin-top: 65px;
   margin-bottom: 2px;
 }
 
 
 #nav {
   width: 1432px;
-  height: 50px;
+  height: 140px;
   border-radius: 5px;
   font-size: 1.4em;
   font-color: #fff;
   line-height: 1.5em;
-  margin-bottom: 8px;
+  margin-bottom: 1px;
   padding-left: 5px;
-  background-color:rgba(75,75,75,0.80); 
+  background-color:rgba(75,75,75,0.40); 
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 8px;
   border-style: solid;
-  border-width: 3px;
+  border-width: 1px;
 }
 
 #w {
-  width: 960px;
-  margin: 0 auto;
-  padding: 10px 24px; 
-  background-color:rgba(75,75,75,0.70); 
+  width: 1000px;
+  margin:  auto;
+  padding: 5px 44px; 
+  background-color:rgba(75,75,75,0.20); 
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 8px;
   border-style: solid;
-  border-width: 3px;
+  border-width: 1px;
 }
 
 #logo {
   float: right;
-  width: 200px;
-  height: 150px;
+  width: 170px;
+  height: 140px;
   background-image: url('tubestockinvertedsmall.png');
 
 }
@@ -149,12 +151,12 @@ a:hover { color: #ffffff; }
 #usersnav {
   display: block;
   margin-top: 14px;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
 }
 
 #usersnav ul {
   display: block;
-  padding: 15px 88px;
+  padding: 15px 77px;
 }
 #usersnav ul li {
   display: inline;
@@ -167,19 +169,23 @@ a:hover { color: #ffffff; }
 }
 
 #usersnav ul li a {
-  padding: 5px 8px;
+  padding: 4px 6px;
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.3em;
   background: #5C005C;
-  text-shadow: 2px 2px 1 rgba(0,0,0,0.8);
+  text-shadow: 19px 6px 1 rgba(0,0,0,0.8);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
 #usersnav ul li a:hover {
   background: #990099;
+  text-shadow: 19px 6px 1 rgba(0,0,0,0.8);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
 }
 
 
@@ -213,15 +219,4 @@ a.external {
 html[xmlns] .clearfix { display: block; }
 * html .clearfix { height: 1%; }
 
-.background-image {
-  background-image: url('http://thissongissick.com/wp-content/uploads/2013/01/Electric-Forest-Music-Festival.jpg');
-  background-size: cover;
-  display: block;
-  filter: blur(5px);
-  -webkit-filter: blur(5px);
-  height: 800px;
-  left: 0;
-  position: fixed;
-  right: 0;
-  z-index: 1;
-}
+

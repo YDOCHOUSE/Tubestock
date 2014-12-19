@@ -12,8 +12,11 @@
 
 <div id="nav">
     <% if current_user %>
-      <p id="log"><%= "Logged in as: #{current_user.email}." %></p>
-      <p id="log"><%= link_to "Logout", :logout, method: :post %></p>
+      <div id="logo"></div>
+    <br>
+      <h1>Tubestock - Festivals At Your Fingertips</h1>
+      <p id="log"><%= "Logged in as: #{current_user.email}." %>
+      <%= link_to "Logout", :logout, method: :post %></p>
     <% else %> | 
       <%= link_to 'Log in with Facebook', auth_at_provider_path(:provider => :facebook) %>
     <% end %>
@@ -23,7 +26,7 @@
     <p id="alert"><%= flash[:alert] %></p>
   </div>
 
-  <div id="logo"></div>
+  
  
 <%= yield %>
 
