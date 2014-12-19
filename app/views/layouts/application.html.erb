@@ -12,12 +12,9 @@
 
 <div id="nav">
     <% if current_user %>
-      <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
+      <%= "Logged in as: #{current_user.email}." %>
       <%= link_to "Logout", :logout, method: :post %>
-    <% else %>
-      <%= link_to "Register", new_user_path %> |
-      <%= link_to "Login", :login %>
-      <%= link_to 'Login with Google', auth_at_provider_path(:provider => :google) %> | 
+    <% else %> | 
       <%= link_to 'Login with Facebook', auth_at_provider_path(:provider => :facebook) %>
     <% end %>
   </div>
