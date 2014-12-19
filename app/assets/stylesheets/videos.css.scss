@@ -18,12 +18,13 @@ body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 62.5%; 
   line-height: 1; 
-  background-image: url('background2.png');
+  background-image: url('background4.jpg');
   color: #535353;
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 15px;
   padding-bottom: 5px;
+  max-width: 90%;
 }
 
 ::selection { background: #c8e7f6; }
@@ -60,6 +61,7 @@ h1 {
   font-weight: normal;
   text-align: center;
   margin-left: 95px;
+  max-width: 90%;
 }
 
 h2 {
@@ -67,6 +69,7 @@ h2 {
   line-height: 3.15em;
   margin-bottom: 1px;
   color: #FFF;
+  max-width: 90%;
 }
 
 p {
@@ -75,6 +78,7 @@ p {
   margin-top: 15px;
   margin-bottom: 8px;
   color: #fff;
+  max-width: 90%;
 }
 
 
@@ -85,6 +89,7 @@ a:hover { color: #ffffff; }
   font-size: 2.0em;
   line-height: 2.5em;  
   color: #FFF;
+  max-width: 90%;
 }
 
 #title {
@@ -93,6 +98,7 @@ a:hover { color: #ffffff; }
   margin-bottom: 8px;
   color: #FFF;
   padding-left: 165px;
+  max-width: 90%;
 }
 
 #alert {
@@ -100,6 +106,7 @@ a:hover { color: #ffffff; }
   line-height: 1.5em;
   margin-bottom: 8px;
   color: #FF0000;
+  max-width: 90%;
 }
 
 #log {
@@ -108,6 +115,7 @@ a:hover { color: #ffffff; }
   color: #FFF;
   margin-top: 65px;
   margin-bottom: 2px;
+  max-width: 90%;
 }
 
 
@@ -144,6 +152,7 @@ a:hover { color: #ffffff; }
   border-radius: 8px;
   border-style: solid;
   border-width: 1px;
+
 }
 
 
