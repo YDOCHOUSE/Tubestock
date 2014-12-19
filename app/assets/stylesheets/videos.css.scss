@@ -53,10 +53,29 @@ strong { font-weight: bold; }
 table { border-collapse: collapse; border-spacing: 0; }
 img { border: 0; max-width: 100%; }
 
+#usersnav ul li a:hover {
+  background: #990099;
+  text-shadow: 19px 6px 1 rgba(0,0,0,0.8);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
 h1 {
   display: block;
   font-family: 'Milonga', 'Trebuchet MS', Georgia, serif;
   color: #FFF;
+  font-size: 4.2em;
+  font-weight: normal;
+  text-align: center;
+  margin-left: 95px;
+  max-width: 90%;
+}
+
+h1:hover {
+  display: block;
+  font-family: 'Milonga', 'Trebuchet MS', Georgia, serif;
+  color: #D8D8D8;
   font-size: 4.2em;
   font-weight: normal;
   text-align: center;
@@ -259,5 +278,23 @@ a.external {
  
 html[xmlns] .clearfix { display: block; }
 * html .clearfix { height: 1%; }
+
+@keyframes pulse {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  animation-name: pulse;
+}
 
 
